@@ -1,7 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Goat from '../Goat/Goat';
 
+import goatShape from '../../helpers/propz/goatShape';
+
 class GoatCoral extends React.Component {
+  static propTypes = {
+    goats: PropTypes.arrayOf(goatShape),
+  }
+
   render() {
     const myGoats = this.props.goats;
 
